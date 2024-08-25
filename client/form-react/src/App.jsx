@@ -62,33 +62,38 @@ const App = () => {
 }
 
   return (
-    <div>
-      <form onClick={submitHandler}>
-        <div>
-        <label htmlFor="">name</label>
-        <input type="text" name="name"  value={user.name} onChange={ChangeHandler} />
+    <div className='w-full h-screen bg-gray-200 flex justify-center items-center '>
+     <div className='bg-white lg:md:w-[30%] p-5 rounded-lg'>
+      <h2 className='text-center text-2xl font-extrabold mb-5'>Conatct Us!</h2>
+      <hr />
+      <hr />
+     <form onClick={submitHandler}>
+        <div className='my-3'>
+        <label htmlFor="">Name :</label> <br />
+        <input type="text" name="name"  value={user.name} onChange={ChangeHandler}  className='border rounded-lg focus:outline-none px-2 w-full py-1'/>
         </div>
-        <div>
-          <label htmlFor="">last name</label>
-          <input type="text" name="lastname" value={user.lastname} onChange={ChangeHandler}/>
+        <div className='mb-3'>
+          <label htmlFor="">Last Name :</label> <br />
+          <input type="text" name="lastname" value={user.lastname} onChange={ChangeHandler} className='border rounded-lg focus:outline-none px-2 w-full py-1'/>
         </div>
-        <div>
-          <label htmlFor="">email</label>
-          <input type="text" name="email" value={user.email} onChange={ChangeHandler}/>
+        <div className='mb-3'>
+          <label htmlFor="">Email:</label> <br />
+          <input type="text" name="email" value={user.email} onChange={ChangeHandler} className='border rounded-lg focus:outline-none px-2 w-full py-1'/>
         </div>
-        <div>
-          <label htmlFor="">phone</label>
-          <input type="number" name="phone" value={user.phone} onChange={ChangeHandler}/>
+        <div className='mb-3'>
+          <label htmlFor="">Phone :</label><br />
+          <input type="number" name="phone" value={user.phone} onChange={ChangeHandler} className='border rounded-lg focus:outline-none px-2 w-full py-1'/>
         </div>
-        <div>
-          <label htmlFor="">address</label>
-          <input type="text" name="address" value={user.address} onChange={ChangeHandler} />
+        <div className='mb-3'>
+          <label htmlFor="">Address :</label><br />
+          <input type="text" name="address" value={user.address} onChange={ChangeHandler} className='border rounded-lg focus:outline-none px-2 w-full py-1'/>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className='bg-blue-300 w-full py-2.5 font-extrabold text-white rounded-lg'>Submit</button>
       </form>
       {
-        successMessage &&  <p style={{ color: 'green' }}>{successMessage}</p>
+        successMessage &&  <p className='text-black bg-green-200 text-center my-5 py-3 shadow rounded-xl '>{successMessage}</p>
       }
+     </div>
     </div>
   )
 }
